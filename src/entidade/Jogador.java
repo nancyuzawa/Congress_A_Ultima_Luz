@@ -306,23 +306,6 @@ public int getAtaque() {
         String caminho = "/res/jogador-classe/" + nomeClasseAtual + "/";
 
         try {
-            // cima1 = setup("/res/jogador/boy_up_1" ,painel.tamanhoDoTile,
-            // painel.tamanhoDoTile);
-            // cima2 = setup("/res/jogador/boy_up_2" ,painel.tamanhoDoTile,
-            // painel.tamanhoDoTile);
-            // baixo1 = setup("/res/jogador/boy_down_1" ,painel.tamanhoDoTile,
-            // painel.tamanhoDoTile);
-            // baixo2 = setup("/res/jogador/boy_down_2" ,painel.tamanhoDoTile,
-            // painel.tamanhoDoTile);
-            // esquerda1 = setup("/res/jogador/boy_left_1" ,painel.tamanhoDoTile,
-            // painel.tamanhoDoTile);
-            // esquerda2 = setup("/res/jogador/boy_left_2" ,painel.tamanhoDoTile,
-            // painel.tamanhoDoTile);
-            // direita1 = setup("/res/jogador/boy_right_1" ,painel.tamanhoDoTile,
-            // painel.tamanhoDoTile);
-            // direita2 = setup("/res/jogador/boy_right_2" ,painel.tamanhoDoTile,
-            // painel.tamanhoDoTile);
-
             cima1 = setup(caminho + "cima1", painel.tamanhoDoTile, painel.tamanhoDoTile);
             cima2 = setup(caminho + "cima2", painel.tamanhoDoTile, painel.tamanhoDoTile);
             baixo1 = setup(caminho + "baixo1", painel.tamanhoDoTile, painel.tamanhoDoTile);
@@ -349,12 +332,32 @@ public int getAtaque() {
     }
 
     public void getImagemDeAtaque() {
-        // OBS: Adicionado/modificado
-        // -----------------------------------------------------
         if (armaAtual == null)
             return;
-        String caminho = "/res/jogador-classe/" + nomeClasseAtual + "/ataques/";
-        System.out.println("Nome da classe atual: " + nomeClasseAtual);
+
+        String subPastaArma = "";
+
+        if (armaAtual.tipo == tipoEspada) {
+            if (armaAtual.nome.toLowerCase().contains("enferrujada")){
+                subPastaArma = "espada_enferrujada";
+            }
+            else {
+                subPastaArma = "espada_normal";
+            }
+        } else if (armaAtual.tipo == tipoMachado) {
+            subPastaArma = "machado";
+        } else if (armaAtual.tipo == tipoPicareta) {
+            subPastaArma = "picareta";
+        } else if (armaAtual.tipo == tipoAdaga) {
+            subPastaArma = "adaga";
+        } else if (armaAtual.tipo == tipoCajado) {
+            subPastaArma = "cajado";
+        } else if (armaAtual.tipo == tipoChama) {
+            subPastaArma = "magia_piromantica";
+        }
+
+        String caminho = "/res/jogador-classe/" + nomeClasseAtual + "/ataques/" + subPastaArma + "/";
+        System.out.println("[DEBUG] Carregando ataque da classe [" + nomeClasseAtual + "] com a arma [" + subPastaArma + "]");
 
         if (armaAtual.tipo == tipoEspada || armaAtual.tipo == tipoCajado || armaAtual.tipo == tipoAdaga
                 || armaAtual.tipo == tipoChama) {
@@ -375,7 +378,6 @@ public int getAtaque() {
         }
 
         if (armaAtual.tipo == tipoMachado) {
-            ataqueCima1 = setup(caminho + "axe_up_1", painel.tamanhoDoTile, painel.tamanhoDoTile * 2);
             ataqueCima1 = setup(caminho + "axe_up_1", painel.tamanhoDoTile, painel.tamanhoDoTile * 2);
             ataqueCima2 = setup(caminho + "axe_up_2", painel.tamanhoDoTile, painel.tamanhoDoTile * 2);
             ataqueBaixo1 = setup(caminho + "axe_down_1", painel.tamanhoDoTile, painel.tamanhoDoTile * 2);
@@ -408,91 +410,27 @@ public int getAtaque() {
                     painel.tamanhoDoTile);
 
         }
-
-        // if(armaAtual.tipo == tipoEspada){
-        // ataqueCima1 = setup("/res/jogador/ataques/boy_attack_up_1"
-        // ,painel.tamanhoDoTile, painel.tamanhoDoTile*2);
-        // ataqueCima2 = setup("/res/jogador/ataques/boy_attack_up_2"
-        // ,painel.tamanhoDoTile, painel.tamanhoDoTile*2);
-        // ataqueBaixo1 = setup("/res/jogador/ataques/boy_attack_down_1"
-        // ,painel.tamanhoDoTile, painel.tamanhoDoTile*2);
-        // ataqueBaixo2 = setup("/res/jogador/ataques/boy_attack_down_2"
-        // ,painel.tamanhoDoTile, painel.tamanhoDoTile*2);
-        // ataqueEsquerda1 = setup("/res/jogador/ataques/boy_attack_left_1"
-        // ,painel.tamanhoDoTile*2, painel.tamanhoDoTile);
-        // ataqueEsquerda2 = setup("/res/jogador/ataques/boy_attack_left_2"
-        // ,painel.tamanhoDoTile*2, painel.tamanhoDoTile);
-        // ataqueDireita1 = setup("/res/jogador/ataques/boy_attack_right_1"
-        // ,painel.tamanhoDoTile*2, painel.tamanhoDoTile);
-        // ataqueDireita2 = setup("/res/jogador/ataques/boy_attack_right_2"
-        // ,painel.tamanhoDoTile*2, painel.tamanhoDoTile);
-
-        // }
-
-        // if(armaAtual.tipo == tipoMachado){
-        // ataqueCima1 = setup("/res/jogador/ataques/boy_axe_up_1"
-        // ,painel.tamanhoDoTile, painel.tamanhoDoTile*2);
-        // ataqueCima2 = setup("/res/jogador/ataques/boy_axe_up_2"
-        // ,painel.tamanhoDoTile, painel.tamanhoDoTile*2);
-        // ataqueBaixo1 = setup("/res/jogador/ataques/boy_axe_down_1"
-        // ,painel.tamanhoDoTile, painel.tamanhoDoTile*2);
-        // ataqueBaixo2 = setup("/res/jogador/ataques/boy_axe_down_2"
-        // ,painel.tamanhoDoTile, painel.tamanhoDoTile*2);
-        // ataqueEsquerda1 = setup("/res/jogador/ataques/boy_axe_left_1"
-        // ,painel.tamanhoDoTile*2, painel.tamanhoDoTile);
-        // ataqueEsquerda2 = setup("/res/jogador/ataques/boy_axe_left_2"
-        // ,painel.tamanhoDoTile*2, painel.tamanhoDoTile);
-        // ataqueDireita1 = setup("/res/jogador/ataques/boy_axe_right_1"
-        // ,painel.tamanhoDoTile*2, painel.tamanhoDoTile);
-        // ataqueDireita2 = setup("/res/jogador/ataques/boy_axe_right_2"
-        // ,painel.tamanhoDoTile*2, painel.tamanhoDoTile);
-
-        // }
-
-        // if(armaAtual.tipo == tipoPicareta){
-        // ataqueCima1 = setup("/res/jogador/ataques/boy_pick_up_1"
-        // ,painel.tamanhoDoTile, painel.tamanhoDoTile*2);
-        // ataqueCima2 = setup("/res/jogador/ataques/boy_pick_up_2"
-        // ,painel.tamanhoDoTile, painel.tamanhoDoTile*2);
-        // ataqueBaixo1 = setup("/res/jogador/ataques/boy_pick_down_1"
-        // ,painel.tamanhoDoTile, painel.tamanhoDoTile*2);
-        // ataqueBaixo2 = setup("/res/jogador/ataques/boy_pick_down_2"
-        // ,painel.tamanhoDoTile, painel.tamanhoDoTile*2);
-        // ataqueEsquerda1 = setup("/res/jogador/ataques/boy_pick_left_1"
-        // ,painel.tamanhoDoTile*2, painel.tamanhoDoTile);
-        // ataqueEsquerda2 = setup("/res/jogador/ataques/boy_pick_left_2"
-        // ,painel.tamanhoDoTile*2, painel.tamanhoDoTile);
-        // ataqueDireita1 = setup("/res/jogador/ataques/boy_pick_right_1"
-        // ,painel.tamanhoDoTile*2, painel.tamanhoDoTile);
-        // ataqueDireita2 = setup("/res/jogador/ataques/boy_pick_right_2"
-        // ,painel.tamanhoDoTile*2, painel.tamanhoDoTile);
-
-        // }
-
     }
 
     public void getImagemDeDefesa() {
-        if (armaAtual == null)
-            return;
+    if (escudoAtual == null) return;
 
-        String caminho = "/res/jogador-classe/" + nomeClasseAtual + "/defesa/";
-
-        defesaCima = setup(caminho + "up", painel.tamanhoDoTile, painel.tamanhoDoTile);
-        defesaBaixo = setup(caminho + "down", painel.tamanhoDoTile, painel.tamanhoDoTile);
-        defesaEsquerda = setup(caminho + "left", painel.tamanhoDoTile, painel.tamanhoDoTile);
-        defesaDireita = setup(caminho + "right", painel.tamanhoDoTile, painel.tamanhoDoTile);
-
-        // defesaCima = setup("/res/jogador/defesa/boy_guard_up" ,painel.tamanhoDoTile,
-        // painel.tamanhoDoTile);
-        // defesaBaixo = setup("/res/jogador/defesa/boy_guard_down"
-        // ,painel.tamanhoDoTile, painel.tamanhoDoTile);
-        // defesaEsquerda = setup("/res/jogador/defesa/boy_guard_left"
-        // ,painel.tamanhoDoTile, painel.tamanhoDoTile);
-        // defesaDireita = setup("/res/jogador/defesa/boy_guard_right"
-        // ,painel.tamanhoDoTile, painel.tamanhoDoTile);
+    String subPastaEscudo = "";
+    if (escudoAtual.nome.toLowerCase().contains("madeira")) {
+        subPastaEscudo = "escudo_madeira";
+    } else {
+        subPastaEscudo = "escudo_azul";
     }
 
-    // ---------------------------------------------------------------------
+    // Mantido o /res no início conforme sua necessidade
+    String caminho = "/res/jogador-classe/" + nomeClasseAtual + "/defesa/" + subPastaEscudo + "/";
+    System.out.println("[DEBUG] Caminho de defesa: " + caminho);
+
+    defesaCima = setup(caminho + "up", painel.tamanhoDoTile, painel.tamanhoDoTile);
+    defesaBaixo = setup(caminho + "down", painel.tamanhoDoTile, painel.tamanhoDoTile);
+    defesaEsquerda = setup(caminho + "left", painel.tamanhoDoTile, painel.tamanhoDoTile);
+    defesaDireita = setup(caminho + "right", painel.tamanhoDoTile, painel.tamanhoDoTile);
+}
 
     public void atualizar() {
 
@@ -831,6 +769,7 @@ public int getAtaque() {
             if (itemSelecionado.tipo == tipoEscudo) {
                 escudoAtual = itemSelecionado;
                 defesa = getDefesa();
+                getImagemDeDefesa();
             }
             if (itemSelecionado.tipo == tipoIliminacao) {
                 if (luzAtual == itemSelecionado) {

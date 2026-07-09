@@ -522,7 +522,7 @@ public class ManipuladorDeEventos {
     
 
     public void desenhar(Graphics2D g2){
-    System.out.println("Area atual: " + painel.areaAtual);
+    // System.out.println("Area atual: " + painel.areaAtual);
 
         g2.setColor(new Color(0, 0, 255, 120)); // azul translúcido
 
