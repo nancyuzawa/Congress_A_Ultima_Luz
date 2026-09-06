@@ -17,11 +17,13 @@ public class ObjCajadoNormal extends Entidade{
         areaAtaque.width = 32;
         areaAtaque.height = 32;
         descricao = "[" + nome + "]\n mas eficaz.";
-        preco = 200;
+        preco = 420;
         direcaoDoMovimento1 = 10;
         direcaoDoMovimento2 = 30;
 
         durabilidade = 100;
+        empilhavel = true;
+
     }
 }
 //--------------------------------------------------------------------

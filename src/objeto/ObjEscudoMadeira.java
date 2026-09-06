@@ -19,6 +19,7 @@ public class ObjEscudoMadeira  extends Entidade{
         poderDoEmpurrao = 2;
 
         durabilidade = 80;
+        empilhavel = true;
         
     }
     

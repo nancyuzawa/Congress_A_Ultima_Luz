@@ -363,15 +363,17 @@ public class PainelDoJogo extends JPanel implements Runnable {
             // " | temInimigoVivo=" + temInimigoVivo +
             // " | invasaoAtiva=" + Progresso.invasaoMapa1Ativa);
 
-            if (temAliadoVivo && !temInimigoVivo) {
-                for (int i = 0; i < npc[mapaAtual].length; i++) {
-                    if (npc[mapaAtual][i] != null && npc[mapaAtual][i].tipo == npc[mapaAtual][i].tipoNpcAliado) {
-                        npc[mapaAtual][i] = null;
-                        interfaceDoUsuario.adicionarMensagem("O aliado retornou para além dos véus.");
-                    }
+           if (temAliadoVivo && !temInimigoVivo) {
+            for (int i = 0; i < npc[mapaAtual].length; i++) {
+                if (npc[mapaAtual][i] != null && npc[mapaAtual][i].tipo == npc[mapaAtual][i].tipoNpcAliado) {
+                    npc[mapaAtual][i] = null;
+                    interfaceDoUsuario.adicionarMensagem("O aliado retornou para além dos véus.");
                 }
-                Progresso.invasaoMapa1Ativa = false;
             }
+            Progresso.invasaoMapa1Ativa = false;
+            
+            interfaceDoUsuario.adicionarMensagem("A névoa densa se dissipou!");
+        }
 
             // atualizar o estado do projetil - bola de fogo
             for (int i = 0; i < projetavel[1].length; i++) {

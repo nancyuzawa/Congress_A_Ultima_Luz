@@ -23,6 +23,7 @@ public class ObjMachado extends Entidade{
         direcaoDoMovimento2 = 40;
 
         durabilidade = 200;
+        empilhavel = true;
     }
     
 }
