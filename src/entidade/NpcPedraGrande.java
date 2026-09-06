@@ -20,11 +20,11 @@ public class NpcPedraGrande extends Entidade{
 
 
         areaSolida = new Rectangle();
-        areaSolida.x = 2;
         areaSolida.x = 6;
+        areaSolida.y = 2;
         areaSolidaPadraoX = areaSolida.x;
         areaSolidaPadraoY = areaSolida.y;
-        areaSolida.width = 44;
+        areaSolida.width = 40;
         areaSolida.height = 40;
 
         setDialogo = -1;

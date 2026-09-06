@@ -13,7 +13,7 @@ public class ObjEspadaEnferrujada  extends Entidade{
         tipo = tipoEspada;
         nome = objNome;
         baixo1 = setup("/res/objeto/espada_enferrujada", painel.tamanhoDoTile, painel.tamanhoDoTile);
-        valorAtaque = 1;
+        valorAtaque = 0;
         areaAtaque.width = 36;
         areaAtaque.height = 36;
         descricao = "[" + nome + "]\nsem corte.";
@@ -22,6 +22,7 @@ public class ObjEspadaEnferrujada  extends Entidade{
         direcaoDoMovimento2 = 30;
 
         durabilidade = 0;
+        empilhavel = true;
     }
     
 }

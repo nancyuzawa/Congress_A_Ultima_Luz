@@ -1,9 +1,7 @@
 package objeto;
 
 import main.PainelDoJogo;
-
 import java.awt.Graphics2D;
-
 import dados.Progresso;
 import entidade.Entidade;
 
@@ -13,7 +11,6 @@ public class ObjNevoaDensa extends Entidade {
     public static final String objNome = "Nevoa Densa";
 
     public ObjNevoaDensa(PainelDoJogo painel) {
-
         super(painel);
         this.painel = painel;
 
@@ -21,38 +18,39 @@ public class ObjNevoaDensa extends Entidade {
         nome = objNome;
         baixo1 = setup("/res/objeto/nevoa_densa", painel.tamanhoDoTile * 2, painel.tamanhoDoTile);
 
-        temColisao = true;
+        // Deslocamento da colisão (Offsets X e Y)
+        areaSolida.x = 4;
+        areaSolida.y = 4;
+        
+        // Tamanho útil da caixa de colisão
+        areaSolida.width = (painel.tamanhoDoTile * 2) - 16; 
+        areaSolida.height = painel.tamanhoDoTile - 8;
 
-        areaSolida.x = 32;
-        areaSolida.y = 16;
-        areaSolida.width = 32;
-        areaSolida.height = 16;
         areaSolidaPadraoX = areaSolida.x;
         areaSolidaPadraoY = areaSolida.y;
-        setDialogo();
 
+        setDialogo();
     }
 
     public void setDialogo() {
         dialogo[0][0] = "Derrote todos inimigos para dissipar a névoa!";
     }
 
-    public void interagir() {
-        iniciarDialogo(this, 0);
-    }
-
     @Override
-    public void atualizar() {
-
+    public void interagir() {
         if (Progresso.invasaoMapa1Ativa) {
-            temColisao = true;
-        } else {
-            temColisao = false;
+            iniciarDialogo(this, 0);
         }
     }
 
     @Override
+    public void atualizar() {
+        aplicarEstadoDeColisao();
+    }
+
+    @Override
     public void desenhar(Graphics2D g2) {
+        aplicarEstadoDeColisao();
 
         if (!Progresso.invasaoMapa1Ativa) {
             return;
@@ -61,4 +59,16 @@ public class ObjNevoaDensa extends Entidade {
         super.desenhar(g2);
     }
 
+    private void aplicarEstadoDeColisao() {
+        if (Progresso.invasaoMapa1Ativa) {
+            temColisao = true;
+            // Define o tamanho reduzido quando ativa:
+            areaSolida.width = (painel.tamanhoDoTile * 2) - 16;
+            areaSolida.height = painel.tamanhoDoTile - 8;
+        } else {
+            temColisao = false;
+            areaSolida.width = 0;
+            areaSolida.height = 0;
+        }
+    }
 }

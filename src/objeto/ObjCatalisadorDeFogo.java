@@ -18,11 +18,13 @@ public class ObjCatalisadorDeFogo extends Entidade{
         areaAtaque.width = 36;
         areaAtaque.height = 36;
         descricao = "[" + nome + "]\n mas eficaz.";
-        preco = 200;
+        preco = 420;
         direcaoDoMovimento1 = 10;
         direcaoDoMovimento2 = 30;
 
         durabilidade = 100;
+        empilhavel = true;
+
     }
 }
 //--------------------------------------------------------------------

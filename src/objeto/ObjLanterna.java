@@ -15,6 +15,7 @@ public class ObjLanterna  extends Entidade{
         descricao = "[" + nome + "]\nIlumina os arredores.";
         preco = 200;
         raioDeLuz = 350;
+        empilhavel = true;
     }
     
 

@@ -60,12 +60,6 @@ public class CriarObjetos {
         int numeroMapa = 0;
         int i = 0;
 
-        //  painel.Obj[numeroMapa][i] = new ObjNevoaDensa(painel);
-        // // painel.Obj[numeroMapa][i] = new ObjPorta(painel);
-        // painel.Obj[numeroMapa][i].mundoX = painel.tamanhoDoTile*22;
-        // painel.Obj[numeroMapa][i].mundoY = painel.tamanhoDoTile*35;
-        // i++;
-
         painel.Obj[numeroMapa][i] = new ObjChave(painel);
         painel.Obj[numeroMapa][i].mundoX = painel.tamanhoDoTile*26;
         painel.Obj[numeroMapa][i].mundoY = painel.tamanhoDoTile*21;

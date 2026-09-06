@@ -18,6 +18,7 @@ public class ObjEscudoAzul extends Entidade{
         preco = 580;
         poderDoEmpurrao = 7;
 
+        empilhavel = true;
         
     }
     
