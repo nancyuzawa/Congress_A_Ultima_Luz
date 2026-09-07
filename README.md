@@ -23,7 +23,8 @@ O jogo combina narrativa, ambientação sombria e desafios estratégicos, propor
   </a>
 </p>
 <p align="center">  
-	<a href="#ambientacao">Ambientação</a> • <a href="#publico">Público-Alvo</a> • <a href="#mecanicas">Mecânicas Implementadas</a> • <a href="#tecnologias">Tecnologias e Referências</a> • <a href="#configuracao">Configuração do Ambiente</a> • <a href="#prototipo">Imagem do Protótipo</a> 
+	<a href="#ambientacao">Ambientação</a> • <a href="#publico">Público-Alvo</a> • <a href="#mecanicas">Mecânicas Implementadas</a> • <a href="#tecnologias">Tecnologias e Referências</a> • <a href="#configuracao">Configuração do Ambiente</a> • <a href="#prototipo">Imagem do Protótipo</a> • <a href="#autoras">Autoras</a> 
+</p>
 </p>
 
 <h2 id="ambientacao">🌍 Ambientação</h2>
@@ -129,9 +130,9 @@ java -cp bin main.Principal
   &nbsp;&nbsp;
   <img src="https://github.com/user-attachments/assets/b2782d51-bf0a-41ab-82e2-0f88c9be1b8c" width="48%">
 </p>
-<h2 id="publico">👥 Público-Alvo</h2>
 
-## 🧑‍💻 Autoras
+<h2 id="autoras">🧑‍💻 Autoras</h2>
+
 - Nancy Yuzawa CP3025641 – Desenvolvedora e pesquisadora do projeto.
 - Rafaela Ferreira CP3026353 – Desenvolvedora e pesquisadora do projeto.
 </br>
