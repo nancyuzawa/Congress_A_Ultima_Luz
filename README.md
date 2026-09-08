@@ -1,4 +1,7 @@
 <img width="1024" height="506" alt="a_ultima_luz" src="https://github.com/user-attachments/assets/1761a461-84f9-467a-81f2-30831ecdcfc6" />
+<p align="right">
+  <sub>Imagem do banner foi gerada por IA.</sub>
+</p>
 </br>
 
 **A Última Luz** é um protótipo de jogo *soulslike* com elementos de RPG e exploração, desenvolvido como parte de um projeto acadêmico.  
