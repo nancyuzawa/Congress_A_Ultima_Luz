@@ -1,4 +1,10 @@
-# 🎮 A Última Luz
+<img width="1024" height="506" alt="a_ultima_luz" src="https://github.com/user-attachments/assets/1761a461-84f9-467a-81f2-30831ecdcfc6" />
+</br>
+
+**A Última Luz** é um protótipo de jogo *soulslike* com elementos de RPG e exploração, desenvolvido como parte de um projeto acadêmico.  
+O jogo combina narrativa, ambientação sombria e desafios estratégicos, proporcionando uma experiência imersiva e desafiadora.
+</br>
+</br>
 <div align="center">
   <img width="64" height="64" alt="baixo1-export" src="https://github.com/user-attachments/assets/eac59a87-a493-4eb5-b188-75a6480f452f" />
   . ݁₊ ⊹ . ݁˖ .
@@ -8,11 +14,6 @@
   . ݁₊ ⊹ . ݁˖ .
   <img width="64" height="64" alt="baixo1-export" src="https://github.com/user-attachments/assets/da122f75-ecde-4cee-949b-c4d4589f3b6b" />
 </div>
-
-</br>
-**A Última Luz** é um protótipo de jogo *soulslike* com elementos de RPG e exploração, desenvolvido como parte de um projeto acadêmico.  
-O jogo combina narrativa, ambientação sombria e desafios estratégicos, proporcionando uma experiência imersiva e desafiadora.
-</br>
 </br>
 
 <p align="center">
