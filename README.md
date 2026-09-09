@@ -115,6 +115,13 @@ Copy-Item -Recurse -Force res bin/
 java -cp bin main.Principal
 ```
 
+<h2>
+	🖥️
+    <a href="https://github.com/nancyuzawa/Feature_A_Ultima_Luz/blob/main/docs/GUIA_GERAR_EXECUTAVEL.md">
+        Guia para geração do executável
+    </a>
+</h2>
+
 <h2 id="prototipo">🖼️ Imagem do Protótipo</h2>
 
 <p align="center">
